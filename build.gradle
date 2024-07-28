@@ -28,6 +28,12 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "DIO.WB.Santander_API_REST.Application"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
